@@ -25,7 +25,6 @@ const router = createBrowserRouter([
         <AppLayout />
       </Suspense>
     ),
-    errorElement: <PageNotFound />,
     children: [
       {
         index: true,
@@ -76,6 +75,10 @@ const router = createBrowserRouter([
         ),
       },
     ],
+  },
+  {
+    path: "*",
+    element: <PageNotFound />,
   },
 ]);
 
