@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { useFetch } from "../Utils/FetchHook";
+import { useFetch } from "../Utils/fetchHook";
 import Loading from "../components/Loading";
 import ProductList from "./ProductPage/ProductList";
 
