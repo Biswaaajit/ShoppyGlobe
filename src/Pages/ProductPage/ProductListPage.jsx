@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import ProductList from "./ProductList";
 import Loading from "../../components/Loading";
-import { useFetch } from "../../Utils/FetchHook";
+import { useFetch } from "../../Utils/fetchHook";
 
 function ProductListPage() {
   const [data, isLoading] = useFetch();
