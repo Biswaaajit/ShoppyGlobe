@@ -38,7 +38,7 @@ function CategoryNav({ dispatch }) {
     <div
       id="category"
       onMouseLeave={() => dispatch({ type: "setShowCategory", payload: false })}
-      className="w-screen hidden  left-0 h-[50vh] md:h-[60vh] top-20 bg-black/95 absolute md:grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-items-center items-center"
+      className="w-full hidden  left-0 h-[50vh] md:h-[60vh] top-20 bg-black/95 absolute md:grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-items-center items-center"
     >
       {categories.map((category) => (
         <CategoryList
