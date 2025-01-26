@@ -24,7 +24,7 @@ function CartPage() {
     );
   }
   return (
-    <div className="pt-20 md:pt-28">
+    <div className="pt-20 pb-14 md:pt-28">
       <MobileCart cartItems={cartItems} />
       <div className=" hidden md:block space-y-6 w-[95%] lg:w-[90%] mx-auto">
         <div className="grid grid-cols-6 text-center text-red-900 font-bold">
