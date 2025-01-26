@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.homePage {
+  background: linear-gradient(
+      rgba(210, 202, 202, 0.199),
+      rgba(241, 236, 236, 0.717)
+    ),
+    url("/homepage.jpg");
+  background-position: center;
+  background-size: cover;
+}
+.cart {
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.687),
+      rgba(255, 255, 255, 0.705)
+    ),
+    url("https://img.freepik.com/free-vector/shopping-cart-realistic_1284-6011.jpg?t=st=1737826768~exp=1737830368~hmac=be0d1a20a9e5458474879283beb0f9ce31bee150b210f44402ace4f6ae3f7a17&w=740");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+/* bg-red-300 sm:bg-green-300 md:bg-yellow-300 lg:bg-white xl:bg-blue-500 */
