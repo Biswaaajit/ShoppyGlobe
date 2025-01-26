@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 export function useFetch() {
   const [data, setData] = useState([]);
   const [isLoading, setLoading] = useState(true);
+  const [error, setError] = useState("");
 
   useEffect(function () {
     async function fetching() {
@@ -12,7 +13,7 @@ export function useFetch() {
         const fetchData = await res.json();
         setData(fetchData.products);
       } catch (err) {
-        console.log(err);
+        setError(err.message);
       } finally {
         setLoading(false);
       }
@@ -20,5 +21,5 @@ export function useFetch() {
     fetching();
   }, []);
 
-  return [data, isLoading];
+  return [data, isLoading, error];
 }

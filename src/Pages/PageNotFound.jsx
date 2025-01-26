@@ -2,11 +2,11 @@ import { useRouteError } from "react-router-dom";
 
 function PageNotFound() {
   const error = useRouteError();
-  console.log(error);
+  console.log(error.data);
   return (
-    <div>
-      <h1>{error.data}</h1>
-      <p>Sorry you donot exist</p>
+    <div className="h-screen flex flex-col justify-center items-center">
+      <p>Error 404 </p>
+      <p>Sorry the page you are looking for does not exist</p>
     </div>
   );
 }

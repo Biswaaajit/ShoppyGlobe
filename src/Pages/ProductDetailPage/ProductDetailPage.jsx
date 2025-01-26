@@ -3,10 +3,11 @@ import { useFetch } from "../../Utils/fetchHook";
 import { useEffect, useState } from "react";
 import Loading from "../../components/Loading";
 import Detail from "./Detail";
+import ProductError from "../ProductPage/ProductError";
 
 function ProductDetailPage() {
   const productId = useParams().productId;
-  const [data] = useFetch();
+  const [data, error] = useFetch();
   const [detail, setDetail] = useState(null);
 
   useEffect(
@@ -18,7 +19,9 @@ function ProductDetailPage() {
     },
     [data, productId]
   );
-
+  if (error) {
+    return <ProductError error={error} />;
+  }
   return detail ? <Detail detail={detail} /> : <Loading />;
 }
 export default ProductDetailPage;
